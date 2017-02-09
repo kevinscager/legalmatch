@@ -48,23 +48,32 @@
                                 <label>Enter Zip Code or City:</label>
                                 <div class="input-group">
                                     <span class="input-group-addon steps">1</span>
-                                    <input type="text" class="form-control" placeholder="Does not have to be where you live">
+                                    <input id="autocomplete" class="form-control" placeholder="Does not have to be where you live" type="text" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>Choose a category:</label>
                                 <div class="input-group">
                                     <span class="input-group-addon steps">2</span>
-                                    <select class="selectpicker" title="Click to choose a legal category">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                    <select id="categorySelect" class="selectpicker" title="Click to choose a legal category">
+                                        <option>Family</option>
+                                        <option>Criminal Defense</option>
+                                        <option>Business</option>
+                                        <option>Personal Injury</option>
+                                        <option>Bankruptcy &amp; Finances</option>
+                                        <option>Products &amp; Services</option>
+                                        <option>Employment</option>
+                                        <option>Real Estate</option>
+                                        <option>Immigration</option>
+                                        <option>Wills, Trusts &amp; Estates</option>
+                                        <option>Government</option>
+                                        <option>Intellectual Property</option>
                                     </select>
                                 </div>
                             </div>
-                        </form>
+                            <br>
+                            <div class="headspan">Can't find your category? <a href="">Click here</a></div>
+                        </form>                    
                     </div>
                     <div class="col-md-5 reviews">
                         <span class="headspan">Clients review LegalMatch lawyers</span>
@@ -125,8 +134,88 @@
                 <div class="clearfix"></div>
             </div>
         </footer>
+
+        <div id="categoryModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">                    
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="modal-main">
+                            <div class="question"><span class="steps">3</span>Which <b>Family law</b> issue(s) apply to your case?</div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Adoptions
+                                        </label>
+                                    </div>                                    
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Guardianship
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Child Custody and Visitations
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Paternity
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Child Support
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Separations
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Divorce
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" value="">
+                                            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                            Spousal Support or Alimony
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div><a href="" class="btn btn-primary">Find A Lawyer Now</a></div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/bootstrap-select.min.js"></script>
+        <script src="assets/js/autocomplete.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAj4Nib8nMT0TBqB4i5VUuozC_5CxmvSu0&libraries=places&callback=initAutocomplete" async defer></script>
+        <script src="assets/js/site-script.js"></script>
     </body>
 </html>

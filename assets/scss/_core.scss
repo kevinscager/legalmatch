@@ -13,6 +13,15 @@ body {
     font-weight: 700;
 }
 
+.steps {
+    padding: 12px 17px;
+    border: none;
+    background: #d68d00;
+    color: #fff;
+    font-weight: bold;
+    @include border-radius(20px);
+}   
+
 header {
     height: 90px;
     padding-top: 10px;
@@ -106,14 +115,14 @@ header {
                         }
                     }
 
-                    .steps {
-                        padding: 12px 17px;
-                        border: none;
-                        background: #d68d00;
-                        color: #fff;
-                        font-weight: bold;
-                        @include border-radius(20px);
-                    }
+                }
+            }
+
+            > div:last-child {
+                text-align: center;
+                a {
+                    color: #fff;
+                    text-decoration: underline;
                 }
             }
         }
@@ -193,31 +202,31 @@ header {
 footer {
     padding-top: 30px;
     padding-bottom: 30px;
-    
+
     .container {
         border-bottom: 1px solid #efefef;
     }
-    
+
     p {
         font-size: 12px;
         line-height: 22px;
         color: #929ba4;
-        
+
         &:first-of-type {
             margin-top: 20px;
             margin-bottom: 30px;
         }
     }
-    
+
     a {
         color: #929ba4;
         text-decoration: none;
         margin-left: 1.3em;
-        
+
         &:first-child {
             margin-left: 0;
         }
-        
+
         &:after {
             content: "\f111";
             font-size: 4px;
@@ -227,21 +236,82 @@ footer {
             width: 1.3em;
             vertical-align: bottom;
         }
-        
+
         &:last-child:after {
             content: none;
         }
-        
+
         &:hover:after {
             color: #929ba4;
         }
     }
-    
+
     .seals {
-        
+
         img {
             float: right;
             margin-bottom: 20px;
         }
+    }
+}
+
+
+.modal-main {
+    padding: 45px 35px;
+    .question {
+        margin-bottom: 30px;
+        .steps {
+            padding: 8px 13px;
+            margin-right: 15px;
+        }
+    }
+
+    .checkbox {
+        label {
+            padding-left: 4px;
+            &:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            input[type="checkbox"] {
+                display: none;
+            }
+            input[type="checkbox"] + .cr > .cr-icon {
+                transform: scale(3) rotateZ(-20deg);
+                opacity: 0;
+                transition: all .3s ease-in;
+            }
+            input[type="checkbox"]:checked + .cr > .cr-icon {
+                transform: scale(1) rotateZ(0deg);
+                opacity: 1;
+            }
+            input[type="checkbox"]:disabled + .cr {
+                opacity: .5;
+            }
+        }
+        .cr {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #a9a9a9;
+            border-radius: .25em;
+            width: 1.3em;
+            height: 1.3em;
+            float: left;
+            margin-right: .5em;
+
+            .cr-icon {
+                position: absolute;
+                font-size: .8em;
+                line-height: 0;
+                top: 50%;
+                left: 20%;
+            }
+        }  
+    }
+
+    > div:last-child {
+        text-align: center;
+        margin-top: 50px;
     }
 }

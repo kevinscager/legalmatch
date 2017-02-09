@@ -3,3 +3,14 @@
     padding-left: 60px;
     padding-right: 60px;
 }
+
+.btn-primary {
+	background: #02377b;
+    text-transform: uppercase;
+    @include border-radius(50px);
+    padding: 15px 30px;
+    border: none;
+    &:hover {
+        @extend .btn-primary;
+    }
+}
