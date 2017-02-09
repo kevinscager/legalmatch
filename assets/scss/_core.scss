@@ -184,6 +184,7 @@ header {
                     a {
                         color: #fbd243;
                         text-decoration: none;
+                        outline: 0;
                     }
                 }
 
@@ -256,8 +257,8 @@ footer {
 }
 
 
-.modal-main {
-    padding: 45px 35px;
+#categoryModal .modal-main {
+    padding: 30px 20px;
     .question {
         margin-bottom: 30px;
         .steps {
@@ -267,6 +268,11 @@ footer {
     }
 
     .checkbox {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
         label {
             padding-left: 4px;
             &:after {
@@ -313,5 +319,99 @@ footer {
     > div:last-child {
         text-align: center;
         margin-top: 50px;
+    }
+}
+
+#clientReview .modal-main {
+    padding: 15px 25px;
+    .title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .media {
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        .media-left {
+            width: 20%;
+            img {
+                width: 85%;
+            }
+        }
+        .media-body {
+            width: 80%;
+            .media-heading {
+                font-size: 30px;
+                font-weight: normal;
+                color: #000;
+            }
+            p {
+                margin-bottom: 0;
+                font-size: 16px;
+                color: #000;
+                &.address {
+                    color: #979da3;
+                }
+            }
+        }
+    }
+    .ratings {
+        font-size: 24px;
+        color: #000;        
+    }
+    .breakdown {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        table {
+            width: 100%;
+        }
+    }
+    .comment {
+        padding-top: 20px;
+        .comment-head {
+            color: #000;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+    }
+    .fa-star {
+        color: #d69024;
+        margin-right: 3px;
+        &.off {
+            color: #666;
+        }
+    }
+    > div {
+        border-bottom: 1px solid #666;
+        padding-bottom: 10px;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .close {
+        color: #0000ff;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: normal;
+        opacity: 1;
+    }
+}
+
+#otherCat .modal-main {
+    padding: 20px;
+    
+    h4 {
+        font-size: 21px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    h5 {
+        font-weight: normal;
+    }
+    ul {
+        margin-top: 10px;
+        li {
+            margin-bottom: 5px;
+        }
     }
 }
