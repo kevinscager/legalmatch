@@ -1,0 +1,44 @@
+$fallback: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-Book.otf');
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-Bold.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-BookIta.otf');
+    font-style: italic;
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-BoldIta.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-Medium.otf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-MediumIta.otf');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-Light.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Gotham Book";
+    src: url('../fonts/Gotham/Gotham-LightIta.otf');
+    font-weight: 300;
+    font-style: italic;
+}
